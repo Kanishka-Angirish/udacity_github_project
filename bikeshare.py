@@ -25,7 +25,7 @@ def get_filters():
                 break
             else:
                 raise TypeError()
-        except:
+        except TypeError:
             print("Oops, you entered an invalid city name. Please try again.")
                        
                    
@@ -34,7 +34,7 @@ def get_filters():
 
     # TO DO: get user input for month (all, january, february, ... , june)
     while True:
-        month = str(input('Enter a name of the month from january to june to filter by, or "all" to apply no month filter: ')).lower()
+        month = str(input('Enter a month (January to June) to filter by, or "all" for no filter: ')).lower()
         if month in ['all', 'january', 'february', 'march', 'april', 'june']:                  
             break
         else:
